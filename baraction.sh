@@ -1,5 +1,7 @@
 #!/bin/sh
 # baraction.sh file for spectrwm status bar.
+# Functions inspired on dwm_blocks.
+# All bar functions works with FreeBSD. I have not test with any linux but I am certain at least one functions may need a modification.
 
 #IDENTIFIER="unicode"
 
@@ -50,7 +52,7 @@ bar_disk () {
 
 bar_network () {
     PRIVATE=$(ifconfig -a | grep 'inet 192' | awk '{print $2}')
-    PUBLIC=$(curl -s https://ifconfig.co/ip)
+    PUBLIC=$(curl -s https://ipinfo.io/ip)
     if [ "$IDENTIFIER" = "unicode" ]; then
         printf "歷 %s - %s" "$PRIVATE" "$PUBLIC"
     else
