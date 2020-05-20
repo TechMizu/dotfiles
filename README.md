@@ -1,2 +1,2 @@
 # dotfiles
-Mizu's dotfiles
+Mizu's dotfiles for FreeBSD.
