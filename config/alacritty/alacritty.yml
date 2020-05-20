@@ -39,21 +39,21 @@ colors:
 
 font:
   # Point size of the font
-  size: 12.0
+  size: 14.0
   # The normal (roman) font face to use.
   normal:
-    family: RobotoMono Nerd Font
+    family: Mononoki Nerd Font
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: RobotoMono Nerd Font
+    family: Mononoki Nerd Font
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: RobotoMono Nerd Font
+    family: Mononoki Nerd Font
     # Style can be specified to pick a specific face.
     # style: Italic
