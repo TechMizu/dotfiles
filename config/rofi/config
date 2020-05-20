@@ -1,0 +1,16 @@
+rofi.show-icons:            true
+rofi.modi:                  drun,run,window,ssh
+rofi.display-run:            
+rofi.display-drun:          
+rofi.display-window:        
+rofi.lines:                 7
+rofi.line-padding:          10
+rofi.matching:              fuzzy
+rofi.bw:                    0
+rofi.padding:               0
+rofi.separator-style:       none
+rofi.hide-scrollbar:        true
+rofi.line-margin:           0
+rofi.font:                  Cousine Nerd Font 12
+rofi.drun-display-format:   {icon} {name}
+rofi.theme: /usr/local/share/rofi/themes/custom-nord.rasi
