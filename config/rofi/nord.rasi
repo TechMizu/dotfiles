@@ -1,109 +1,66 @@
+
+configuration {
+  show-icons: true;
+  font: "SauceCodePro Nerd Font Medium 10";
+  drun-display-format: "{icon} {name}";
+  display-run: " ";
+  display-drun: " ";
+  display-window: " ";
+  modi: "window,run,drun";
+}
+
 * {
-    backgroundcolor: #2E3440;
-    bg1: #3b4252;
-    backgroundcoloralternate: #2E3440;
-    separatorcolor: #3b4252;
-    scrollbarcolor: #3b4252;
-    foregroundcolor: #8FBCBB;
-    foregroundcolorinverse: #8FBCBB;
-    selectioncolor: #3b4252;
+  background-color: #2E3440;
+  bg-alt: #3B4252;
+  fg: #ECEFF4;
 
+  nord-blue-light: #88C0D0;
+  nord-yellow: #EBCB8B;
 
-    font-size: 1px;
-    border-color: @separatorcolor;
-    background-color: @backgroundcolor;
-    text-color: @foregroundcolor;
-    margin: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    spacing: 0;
+  border: 0;
+  lines: 12;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
 }
 
-#listview {
-    spacing: 0;
-    scrollbar: true;
-    margin: 0;
-    dynamic: true;
+window {
+  width: 30%;
+  transparency: "real";
 }
 
-#window {
-    background-color: @backgroundcolor;
-    border-color: @separatorcolor;
-    border: 1;
-    width: 30%;
-    border-radius: 2px;
+mainbox {
+  children: [inputbar, listview];
 }
 
-#mainbox {
-    border: 0;
-    padding: 0;
-    background-color: @backgroundcoloralternate;
+listview {
+  columns: 1;
 }
 
-#element {
-    padding: 16;
-    border: 0 0 1 0;
-    border-color: @separatorcolor;
-    background-color: @backgroundcoloralternate;
+element {
+  padding: 12;
+  orientation: vertical;
+  text-color: @fg;
 }
 
-#element.selected.normal {
-    background-color: @selectioncolor;
-    text-color: @foregroundcolorinverse;
-    border-radius: 0px;
-
-    border: 0 0 1 0;
-    border-color: @separatorcolor;
+element selected {
+  background-color: @bg-alt;
+  text-color: @nord-blue-light;
 }
 
-#element.alternate.normal {
-    background-color: @backgroundcoloralternate;
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
 }
 
-#element.normal.active {
-    background-color: #434c5e;
+prompt {
+  enabled: true;
+  font: "SauceCodePro Nerd Font 12";
+  padding: 12 0 0 12;
+  text-color: @nord-yellow;
 }
 
-#element.alternate.active {
-    background-color: #434c5e;
+entry {
+  padding: 12;
+  text-color: @nord-yellow;
 }
-
-#element.selected.active {
-    background-color: @selectioncolor;
-    text-color: @foregroundcolorinverse;
-    border-radius: 0px;
-
-    border: 0 0 1 0;
-    border-color: @separatorcolor;
-}
-
-#inputbar {
-    border: 0 solid 0 solid 1 solid 0 solid;
-    margin: 0;
-    spacing: 0;
-    border-color: @separatorcolor;
-}
-
-#prompt {
-    padding: 16;
-    background-color: @backgroundcoloralternate;
-    border: 0 1 0 0;
-}
-
-#entry {
-    padding: 16;
-}
-
-#scrollbar {
-    border: 0;
-    width: 8px;
-    handle-color: @scrollbarcolor;
-    handle-width: 8px;
-    background-color: @backgroundcoloralternate;
-}
-
-#scrollbar handle {
-    border: 1px;
-    border-color: #ff0000;
-}
-
